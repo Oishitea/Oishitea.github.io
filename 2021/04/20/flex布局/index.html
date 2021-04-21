@@ -44,12 +44,10 @@
 <h3 id="特性"><a href="#特性" class="headerlink" title="#特性"></a>#特性</h3><p>  当我们把一个元素的display属性设置为flex或者inline-flex后，它就成了一个容器。flex与inline-flex的关系类似于block与inline-block的关系，用来定义容器是块级元素还是行内元素。<br></p>
 <p>  无论元素是设为flex or inline-flex，都有一些默认的行为值得我们关注。</p>
 <ul>
-<li><p>子项目的block、float、clear、vertical-align属性都将失效，且子项目都变成了行内元素。</p>
-</li>
-<li><p>项目从左到右（主轴方向），如果子项目的总宽度大于容器的宽度，那么每个子项目的宽度会自动缩小以达到子项目总宽度等于容器宽度的效果，而不会另起一行。具体为啥不会另起一行，后面会有说明。</p>
-<h3 id="容器和子项目的相关属性"><a href="#容器和子项目的相关属性" class="headerlink" title="#容器和子项目的相关属性"></a>#容器和子项目的相关属性</h3></li>
+<li>子项目的block、float、clear、vertical-align属性都将失效，且子项目都变成了行内元素。</li>
+<li>项目从左到右（主轴方向），如果子项目的总宽度大于容器的宽度，那么每个子项目的宽度会自动缩小以达到子项目总宽度等于容器宽度的效果，而不会另起一行。具体为啥不会另起一行，后面会有说明。</li>
 </ul>
-<table>
+<h3 id="容器相关属性"><a href="#容器相关属性" class="headerlink" title="#容器相关属性"></a>#容器相关属性</h3><table>
 <thead>
 <tr>
 <th align="left">容器属性</th>
@@ -70,17 +68,56 @@
 </tr>
 <tr>
 <td align="left">justify-content</td>
-<td>定义子项目在主轴上的对齐方式，默认值是flex-start :左对齐。另外四个值是flex-end:右对齐、center：居中、space-between：两端对齐、space-around：每个项目两侧的间隔相等。</td>
+<td>定义子项目在主轴上的对齐方式，默认值是flex-start :左对齐。另外四个值是flex-end:右对齐、center：居中、space-between：两端对齐、space-around：每个项目两侧的间隔相等。space-evenly：在主轴上，剩余空间平均分配，与 <code>space-between</code> 不同的是，between 是在项目之间，而 evenly 是在轴的最左边和最右边也同样会有空间分配</td>
 </tr>
 <tr>
 <td align="left">align-items</td>
-<td>定义项目在交叉轴上如何对齐，</td>
+<td>定义项目在交叉轴上的对齐方式，默认值是stretch：如果子项目没有设置固定高度，则会被拉伸填充满交叉轴方向剩余的空间。另外4个值是flex-start:子项目在交叉轴起始线位置对齐、flex-end:子项目在交叉轴终点线位置对齐、center:子项目在交叉轴方向居中对齐、baseline：项目在交叉轴方向沿项目中第一行文字的基线对齐。</td>
 </tr>
 <tr>
 <td align="left">align-content</td>
-<td>定义多根轴线（多行）在交叉轴上的对齐方式</td>
+<td>定义多根轴线（多行）在交叉轴上的对齐方式，默认值是stretch：交叉轴方向剩余空间平均分配到每一行。其他5个值和justify-content的5个属性值一样。</td>
 </tr>
 </tbody></table>
+<h3 id="justify-content和align-content有啥区别？"><a href="#justify-content和align-content有啥区别？" class="headerlink" title="#justify-content和align-content有啥区别？"></a>#justify-content和align-content有啥区别？</h3><ol>
+<li><p>justify-content是控制项目与项目之间的空间分配，align-content是控制行与行之间的空间分配。</p>
+</li>
+<li><p>align-content只能适用于多根轴线（多行）的容器，如果容器只有一根轴线，该属性不起作用。</p>
+<br></li>
+</ol>
+<h3 id="项目相关属性"><a href="#项目相关属性" class="headerlink" title="#项目相关属性"></a>#项目相关属性<br></h3><table>
+<thead>
+<tr>
+<th>项目属性</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>order</td>
+<td>定义项目的排列顺序，数值越小，排列越靠前，默认值为0。</td>
+</tr>
+<tr>
+<td>flex-grow</td>
+<td>定义项目的放大比例，默认值为0，即如果存在剩余空间，也不放大。</td>
+</tr>
+<tr>
+<td>flex-shrink</td>
+<td>定义项目的缩小比例，默认值为1，即如果空间不足，项目将缩小。</td>
+</tr>
+<tr>
+<td>flex-basis</td>
+<td></td>
+</tr>
+<tr>
+<td>flex</td>
+<td>该属性是以上三个属性的缩写，默认值为0，1，auto。</td>
+</tr>
+<tr>
+<td>align-shelf</td>
+<td>允许单个项目有与其他项目不一样的对齐方式，可覆盖父元素的align-items属性。默认值为auto，即表示继承父元素的align-items属性，如果没有父元素则默认值是stretch。其他的四个值和align-items一样。</td>
+</tr>
+</tbody></table>
+<p><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000021883911">❤</a></p>
 
     </div>
 
