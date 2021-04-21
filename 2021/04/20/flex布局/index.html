@@ -41,6 +41,46 @@
 <img src="https://i.loli.net/2021/04/20/ZsRH3DeLOK1caSj.png" alt="WX20210420-165419@2x.png" style="zoom:50%;" />
 
 <p>  容器默认存在有两根轴，水平的主轴（main axis）和垂直的交叉轴（cross axis）。主轴的开始位置（与边框的交叉点）叫做<code>main start</code>，结束位置叫做<code>main end</code>；交叉轴的开始位置叫做<code>cross start</code>，结束位置叫做<code>cross end</code>。项目默认沿主轴排列。单个项目占据的主轴空间叫做<code>main size</code>，占据的交叉轴空间叫做<code>cross size</code>。</p>
+<h3 id="特性"><a href="#特性" class="headerlink" title="#特性"></a>#特性</h3><p>  当我们把一个元素的display属性设置为flex或者inline-flex后，它就成了一个容器。flex与inline-flex的关系类似于block与inline-block的关系，用来定义容器是块级元素还是行内元素。<br></p>
+<p>  无论元素是设为flex or inline-flex，都有一些默认的行为值得我们关注。</p>
+<ul>
+<li><p>子项目的block、float、clear、vertical-align属性都将失效，且子项目都变成了行内元素。</p>
+</li>
+<li><p>项目从左到右（主轴方向），如果子项目的总宽度大于容器的宽度，那么每个子项目的宽度会自动缩小以达到子项目总宽度等于容器宽度的效果，而不会另起一行。具体为啥不会另起一行，后面会有说明。</p>
+<h3 id="容器和子项目的相关属性"><a href="#容器和子项目的相关属性" class="headerlink" title="#容器和子项目的相关属性"></a>#容器和子项目的相关属性</h3></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">容器属性</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">flex-direction</td>
+<td>用于指定主轴的方向，默认值是row(从左到右)，另外三个值是row-reverse、column、column-reverse.</td>
+</tr>
+<tr>
+<td align="left">flex-wrap</td>
+<td>css世界中，看到wrap这个单词，大概率是跟换行有关。用于指定子项目过多超出容器时是否换行，默认值是nowrap（不换行），另外2个值是wrap(换行)，wrap-reverse(反向换行)。</td>
+</tr>
+<tr>
+<td align="left">flex-flow</td>
+<td>flex-direction 和 flew-wrap 的简写形式，默认值是 row nowrap。</td>
+</tr>
+<tr>
+<td align="left">justify-content</td>
+<td>定义子项目在主轴上的对齐方式，默认值是flex-start :左对齐。另外四个值是flex-end:右对齐、center：居中、space-between：两端对齐、space-around：每个项目两侧的间隔相等。</td>
+</tr>
+<tr>
+<td align="left">align-items</td>
+<td>定义项目在交叉轴上如何对齐，</td>
+</tr>
+<tr>
+<td align="left">align-content</td>
+<td>定义多根轴线（多行）在交叉轴上的对齐方式</td>
+</tr>
+</tbody></table>
 
     </div>
 
