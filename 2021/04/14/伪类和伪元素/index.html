@@ -42,6 +42,7 @@
 <ul>
 <li><font color="lightblue">UI伪类</font> 会在HTML元素处于某种状态时（比如鼠标悬停在链接上），为该元素应用css样式。</li>
 <li><font color="lightblue">结构化伪类</font> 基于DOM元素在DOM树中的结构特性进行匹配选择（父子关系或者兄弟关系），比如某个元素的第一个子节点，或者某元素的第1-4个节点。</li>
+<li>验证伪类 表单验证一直是web设计中最不好搞的，有了验证伪类，可以让用户填写表单的过程中更平顺。</li>
 </ul>
 </li>
 <li><p>UI伪类</p>
@@ -51,9 +52,51 @@
 <li><p>聚焦伪类：:focus   该伪类适用于具有焦点的元素 ，只要是可以接收键盘事件或其他用户输入的元素都可以使用:focus伪类，大多数情况下，:focus伪类都是被使用在链接和表单元素上的。一般情况下，浏览器都会自动在表单元素获取焦点时给元素周围添加轮廓，由浏览器添加的样式是每个浏览器的默认样式，并且通常情况下，每个浏览器之间的默认样式看起来是不一样。</p>
 <p>但为了页面的整体美观和浏览器的样式兼容性，往往我们都需要修改获得焦点时的元素样式，把默认样式替换为我们自己的样式。         a:focus、input:focus</p>
 </li>
-<li></li>
 </ul>
-<p>​                                                       </p>
+</li>
+<li><p>结构化伪类    </p>
+<table>
+<thead>
+<tr>
+<th>伪类名称</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>:first-child</td>
+<td>选择父元素的第一个子元素                                                 <strong>应用在父元素后面</strong></td>
+</tr>
+<tr>
+<td>:first-of-type</td>
+<td>选择父元素容器内的每一个类型子元素的第一个元素         <strong>应用在父元素后面</strong></td>
+</tr>
+<tr>
+<td>:last-child</td>
+<td>选择父元素的最后一个子元素          <strong>应用在父元素后面</strong></td>
+</tr>
+<tr>
+<td>:last-of-type</td>
+<td>选择父元素容器内的每一个类型子元素的最后一个元素    <strong>应用在父元素后面</strong></td>
+</tr>
+<tr>
+<td>:not</td>
+<td>取反伪类，用法是:not(参数)，即除了括号里的那个，其余的都应用某种样式。 li :not(.cube1){xxx}     除了类是cube1的li元素都应用样式。  li:not(.cube1):not(.cube2)  {xxx}   可以连着使用。 <strong>应用在子元素后面</strong></td>
+</tr>
+<tr>
+<td>only-child</td>
+<td>选择父元素中唯一的子元素，如果父元素中有多个子元素，则该伪类不生效。<strong>应用在父元素后面</strong></td>
+</tr>
+</tbody></table>
+<p><strong>:nth-child</strong>伪类根据元素在标记中的次序选择相应的元素，  这是css世界中用途最广、支持也最广的伪类。</p>
+<p>所有的:nth伪类都接受一个参数，这个参数是一个公式。公式可以是一个整数，或者关键字odd、even，或者形如an+b的结构。</p>
+<p>对于 an+b：</p>
+<ul>
+<li>a 是一个整数</li>
+<li>+是运算符，可以是加号可以是减号</li>
+<li>b也是一个整数</li>
+</ul>
+<p>:nth-last-child  是最后往前选择，与nth-child选择顺序相反，除此之外，它们俩一模一样。</p>
+<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/9086114e07d4">🐱</a>                                                       </p>
 </li>
 </ol>
 
