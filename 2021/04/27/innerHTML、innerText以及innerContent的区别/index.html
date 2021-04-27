@@ -23,89 +23,38 @@
 
 <meta name="generator" content="Hexo 5.4.0"></head>
 <body id="bodyx">
-    <div class="hd logodiv">
-    <img src="/img/male.png" class="logopng" alt="logo">
-    <p class="logot">
-         Gone with the Hurricane 
-         <span class="logo_2"></span>
-        <h3 class="words" style="font-weight: bold;font-family: Georgia;"> 
-            Cat 🐈 Code 🧑‍💻 Life 🌈 
-        </h3>
-    </p>
+    <div class="hd posts">
+    <a href="/index.html"><i class="fa fa-home
+ replay-btn" aria-hidden="true"></i></a>
+    <div class="post-title">
+        <p>
+            innerHTML、innerText和innerContent三者的区别
+        </p>
+        <hr>
+    </div>
+    <div class="post-content">
+        <h2 id="共同点"><a href="#共同点" class="headerlink" title="共同点"></a>共同点</h2><p>把这三个属性放在一起是因为这三个都是用来设置标签中间的文本内容的</p>
+<h2 id="不同点"><a href="#不同点" class="headerlink" title="不同点"></a>不同点</h2><ol>
+<li><p>设置标签中间的内容</p>
+<p>​    如果内容中有html标签的话，innerText和innerContent只会将html标签输出为对应的文本内容，而innerHTML则能够把内容    </p>
+<p>​    中的html标签转换为标签，如下代码所示：</p>
+<div id="container">
+  
 </div>
 
-<div class="hd">
-    <ol class="breadcrumb">
-        
-            <li><a class="ba" href="/about">关于我👀</a></li>
-        
-    </ol>
-    <hr class="breadcrumbhr">
-</div>
-<div class="hd">
-    
-    
-        
-        
-            <div class="titlex">
-                <p><span class="jing"></span><span style="color: #6d9ee7;"> 公元</span> 
-                 2021年 🕛
-                </p>
-            </div>
-            
-        
-        <a class="flink" href="/2021/04/27/innerHTML%E3%80%81innerText%E4%BB%A5%E5%8F%8AinnerContent%E7%9A%84%E5%8C%BA%E5%88%AB/">
-            <div class="list">
-                <div class="postname">
-                    innerHTML、innerText和innerContent三者的区别
-                </div>
-                <div class="posttime">
-                    April 27th
-                </div>
-            </div>
-        </a>
-    
-        
-        
-        <a class="flink" href="/2021/04/22/%E4%BC%AA%E5%85%83%E7%B4%A0/">
-            <div class="list">
-                <div class="postname">
-                    伪元素
-                </div>
-                <div class="posttime">
-                    April 22nd
-                </div>
-            </div>
-        </a>
-    
-        
-        
-        <a class="flink" href="/2021/04/20/flex%E5%B8%83%E5%B1%80/">
-            <div class="list">
-                <div class="postname">
-                    flex布局
-                </div>
-                <div class="posttime">
-                    April 20th
-                </div>
-            </div>
-        </a>
-    
-        
-        
-        <a class="flink" href="/2021/04/14/%E4%BC%AA%E7%B1%BB/">
-            <div class="list">
-                <div class="postname">
-                    伪类
-                </div>
-                <div class="posttime">
-                    April 14th
-                </div>
-            </div>
-        </a>
-    
-</div>
+<script>
+  container.innerText = "<p>这是一个p标签</p>";
+  alert(container.innerText);
+</script>
 
+<p>![image-20210427141641781](/Users/iwannarock/Library/Application Support/typora-user-images/image-20210427141641781.png)</p>
+</li>
+</ol>
+
+    </div>
+
+    
+</div>
     <div class="footer" id="footer">
     <p><h4>Copyright © 2020 | Author:  | Theme By <a class="theme-author" target="_blank" rel="noopener" href="https://github.com/Xunzhuo/hexo-theme-coder" style="font-size:14px; color: #969696">Coder</a></h4>
     <label class="el-switch el-switch-blue el-switch-sm" style="vertical-align: sub;">
