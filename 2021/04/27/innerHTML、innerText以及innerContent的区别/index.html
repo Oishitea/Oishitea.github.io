@@ -40,7 +40,7 @@
 <p>​    中的html标签转换为标签，如下代码所示：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line">  </span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">  container.innerText = <span class="string">&quot;&lt;p&gt;这是一个p标签&lt;/p&gt;&quot;</span>;</span><br><span class="line">  alert(container.innerText);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">  container.innerText = <span class="string">&quot;&lt;p&gt;这是一个p标签&lt;/p&gt;&quot;</span>;       <span class="comment">//container.innerContent是一样的效果</span></span><br><span class="line">  alert(container.innerText); </span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 
 
 
